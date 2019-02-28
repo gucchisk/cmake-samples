@@ -27,4 +27,4 @@ find_package_handle_standard_args(Go
 if(Go_FOUND)
   message("Go Found: ${Go_INCLUDE_DIR}")
 endif()
-   
+
