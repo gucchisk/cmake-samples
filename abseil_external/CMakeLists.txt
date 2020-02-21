@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 11)
 
+set(ABSEIL_LINK_LIST absl::memory)
 if (${ABSEIL_UPPER})
-  set(ABSEIL_LINK_LIST absl::strings)
+  list(APPEND ABSEIL_LINK_LIST absl::strings)
   add_compile_definitions(ABSEIL_UPPER)
 endif()
 

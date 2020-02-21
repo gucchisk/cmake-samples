@@ -9,10 +9,6 @@ ExternalProject_Add(abseil
   GIT_TAG 20190808
   SOURCE_DIR ${CMAKE_BINARY_DIR}/abseil-src
   BINARY_DIR ${CMAKE_BINARY_DIR}/abseil-bin
+  BUILD_COMMAND ""
   INSTALL_COMMAND ""
-  STEP_TARGETS download
   )
-ExternalProject_Get_property(abseil SOURCE_DIR)
-ExternalProject_Get_property(abseil BINARY_DIR)
-include_directories(${SOURCE_DIR})
-link_directories(${BINARY_DIR})
