@@ -15,7 +15,7 @@ execute_process(COMMAND ${CMAKE_COMMAND} --build . --target abseil-download
 list(LENGTH ABSEIL_LINK_LIST link_list_length)
 
 if (link_list_length GREATER 0)
-  add_subdirectory(${CMAKE_BINARY_DIR}/abseil-src)
+  add_subdirectory(${CMAKE_BINARY_DIR}/abseil-src EXCLUDE_FROM_ALL)
 endif()
 
 include_directories(${CMAKE_BINARY_DIR}/abseil-src)
